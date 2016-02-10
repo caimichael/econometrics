@@ -81,18 +81,15 @@ $TS_i = \beta_0 + \beta_1 EXPENDITURE_i$\\~\\
 b) Interpret $\beta_0$ and $\beta_1$\\
 $\beta_0$ is the average math and reading test score for school $i$ where the expenditure is equal to zero dollars per student.\\
 $\beta_1$ is the change in the average math and reading test score for school $i$ when the expenditure per student (in dollars) is increased by one unit.\\~\\
-c) Estimate the above regression model and write the sample regression line.\\~\\
-R-Code:\\
-CAS\$exps $\leftarrow$ CAS\$expenditure/CAS\$students \\
-fm $\leftarrow$ lm(ts \textasciitilde exps, data=CAS)\\~\\
+c) Estimate the above regression modelxs and write the sample regression line.\\~\\
 $\widehat{TS_i} = \hat{\beta_0} + \hat{\beta_1} EXPENDITURE_i$\\
-$\widehat{TS_i} = 652.45510 + 0.15463 EXPENDITURE_i$\\~\\
+$\widehat{TS_i} = 623.6 + .005749 EXPENDITURE_i$\\~\\
 d) Interpret $\hat{\beta_0}$ and $\hat{\beta_1}$ \\
-$\hat{\beta_0} = 652.45510$ means that if the expenditure per student (in dollars) was zero then the average math and reading test score for school $i$ would be 652.45510.\\
-$\hat{\beta_1} = 0.15463$ means that for every one unit increase in expenditure per student of school $i$ then there will be a 0.15463 increase in average math and reading test score.\\~\\
+$\hat{\beta_0} = 623.6 $ means that if the expenditure per student (in dollars) was zero then the average math and reading test score for school $i$ would be 623.6 .\\
+$\hat{\beta_1} = 0.15463$ means that for every one unit increase in expenditure per student of school $i$ then there will be a 0.005749 increase in average math and reading test score.\\~\\
 e) Is the sign of $\hat{\beta_1}$ what you would expect? Explain.\\
 Yes, I expected that $\hat{\beta_1}$ would be positive because you would expect that if you spend more money per student then that student should probably perform better in school.\\~\\
-f) For a \$1000 increase in per-student expenditure, you can expect an estimated average change of $1000 * 0.15463 = 154.63$ point change in test score.\\
+f) For a \$1000 increase in per-student expenditure, you can expect an estimated average change of $1000 * .005749 = 5.749$ point change in test score.\\
 
 \section{Problem Five}
 a) Generate the variable $CS$ from the variables \textbf{computer} and \textbf{students}.\\
