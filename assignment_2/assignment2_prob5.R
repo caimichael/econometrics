@@ -27,15 +27,31 @@ CAS$ts <- (CAS$math+CAS$read)/2
 # student teacher ratio
 CAS$str <- CAS$students/CAS$teachers 
 
-#Computers per student
-CAS$cs <- CAS$computer/CAS$students
+#####################################################################################
+# plot some stuff
+#####################################################################################
+
+# plot math scores against reading scores
+plot(CAS$read,CAS$math,pch=19)
+
+# plot number of students againts number of teachers
+plot(CAS$students,CAS$teachers,pch=19)
+
+# plot historgram of student teacher ratio
+hist(CAS$str,col="grey")
+
+# plot histogram of test score 
+hist(CAS$ts,col="grey")
+
+# plot figure 4.2 in Stock and Watson
+plot(CAS$str,CAS$ts,pch=19,xlab="Student-teacher ratio",ylab="Test score")
 
 #####################################################################################
 # estimate regression
 #####################################################################################
 
 # regress ts on str and store in fm
-fm <- lm(ts ~ expenditure, data=CAS)
+fm <- lm(ts ~ str, data=CAS)
 # print summary
 summary(fm)
 

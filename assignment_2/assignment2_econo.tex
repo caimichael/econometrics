@@ -1,0 +1,85 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for rotated page geometry
+%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
+
+%SetFonts
+
+%SetFonts
+
+
+\title{Assignment 2}
+\author{Michael Cai}
+\date{\today}							% Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+\section{Problem One}
+(a) \textit{Interpret the estimated intercept and slope coefficient. How would you interpret $R^2$?}\\
+The intercept indicates that when the ratio of the U.S. consumer price index to the Canadian consumer price index equals 0 the exchange rate of the Canadian dollar to the U.S. dollar (CAD/USD) will be -0.902 CAD/USD.\\
+The slope coefficient indicates that for a 1 unit increase in the ratio of the U.S. CPI to the Canadian CPI there is a corresponding 2.430 unit increase in the exchange rate CAD/USD.\\
+The $R^2$ indicates that 0.440 or 44.4 percent of the variation in the exchange rate of CAD/USD can be explained by the ratio of the U.S. CPI to the Canadian CPI.\\~\\
+(b) \textit{Does the positive value of the estimated slope coefficient make economic sense? What is the underlying economic theory?}\\
+Yes, it does make sense because the CPI, which indicates inflation/price level, and the exchange rate are endogenously related variables. If you were to hold all other factors constant for the two currencies, then an increase in X, which is an increase in U.S. CPI/Canadian CPI, means that inflation in the U.S. is outpacing inflation in Canada. If this is the case then the U.S. dollar is depreciating relative to the Canadian dollar, and thus this is met by a corresponding increase in Y, or the exchange rate CAD/USD.\\
+The underlying economic theory for this concept is purchasing power parity, which states that the exchange rate of two currencies must equal the ratio of the cost of a basket of goods in those two currencies.\\~\\
+(c) \textit{Suppose we were the redefine X as the ratio of the Canadian CPI to the U.S. CPI. Would that change the sign of the coefficient of X? Why?}\\
+If you redefine X as the ratio of Canadian CPI/U.S. CPI then an increasing X would imply a relative depreciation of the Canadian dollar to the U.S. dollar, which would be met by a decreasing Y, as the exchange rate of CAD/USD would be decreasing as the Canadian dollar decreases in value with respect to the U.S. dollar.\\
+Therefore, there would be a change in the sign of the coefficient of X because upon flipping the ratio you are effectively flipping the relation.\\
+
+\section{Problem Two}
+Consider the model $Y_i = \beta_0 + \beta_1X_i + u_i$ where $X$ and $Y$ are as defined in question 1. Suppose you are told that the standard error of $\hat{\beta_1}$ is 0.096. Based on this and the estimates presented in question 1:\\~\\
+a) What is the p-value of a test of the hypothesis $H_0: \beta_1 = 1$ against $H_1: \beta_1 >1$?\\
+First we must calculate the t-statistic, which is defined as $t = \frac{\hat{\beta_1} - \beta_{1,0}}{s.e.(\hat{\beta_1})}$.\\
+$t = \frac{2.430 - 2}{0.096} = 4.479$\\
+Then we calculate the p-value from the normal distribution based on this t-statistic.\\
+For a t-statistic of 4.479 the corresponding p-value is $1 - \Phi(4.479)$ which is  $< 0.00001$.\\~\\
+b) What is the p-value of a test of the hypothesis $H_0: \beta_1 = 2$ against $H_1: \beta_1 \neq 2$?\\
+The t-statistic is calculated the same way as in part a), but the difference is that instead of computing it was $1 - \Phi(x)$ you have to double it to account for both tails. Therefore the p-value is equal to $2(1-\Phi(4.479)$ which is still very small at $<0.00002$. \\~\\
+c) Yes, they are different because you must account for both tails of the distribution when calculating a two-tailed test.\\~\\
+d) To construct a 95 percent confidence interval, we must calculate the interval of $[\hat{\beta_1} - 1.96(s.e. \hat{\beta_1}), \hat{\beta_1} + 1.96(s.e. \hat{\beta_1})]$.\\
+$[\hat{\beta_1} - 1.96(s.e. \hat{\beta_1}), \hat{\beta_1} + 1.96(s.e. \hat{\beta_1})] = [4.479 - 1.96(0.096), 4.479 + 1.96(0.096)]$\\
+$ = [4.29084, 4.66716]$ is the 95 percent confidence interval for $\beta_1$.\\
+
+\section{Problem Three}
+a) Interpret the estimated slope coefficient.\\
+The slope coefficient of $\hat{\beta_1} = 13.9$ is difference in the average test score between the smaller classes and the regular classes.\\~\\
+b) Interpret the $R^2$.\\
+The $R^2$ value of 0.01 indicates that 1 percent of the variation in test scores is explained by the variation the class size. \\~\\
+c) Is the estimated effect of the class size on test score statistically significant? Perform a test at the 5 percent level.\\
+The first step to calculate statistical significance of a variable is to formulate hypotheses:\\
+$H_0: \beta_1 = 0$\\
+$H_1: \beta_1 \neq 0$\\
+Next we need to calculate the t-statistic.\\
+$t = \frac{13.9 - 0}{2.5} = 5.56$\\
+Then we need to calculate the p-value from the t-statistic.\\
+p-value = $2\Phi(5.56) \approx 0$.\\
+Because the p-value of 0 is less than 0.05, we can reject the $H_0$ and say that the effect of class size on test score is statistically significant with 95 percent confidence.\\~\\
+d) Construct a 95 percent confidence interval for the effect of SmallClass on TestScore.\\
+$[\hat{\beta_1} - 1.96(s.e. \hat{\beta_1}), \hat{\beta_1} + 1.96(s.e. \hat{\beta_1})] = [13.9 - 1.96(2.5), 13.9+1.96(2.5)]$\\
+$ = [9.15, 18.65]$\\
+e) Do you think the regression errors are plausibly homoskedastic?\\
+Yes, because the variance for a small class versus a large class in terms of test score looks like it would be the same.
+
+\section{Problem 4}
+a) Write the sample regression function.\\
+$\widehat{TestScore_i} = 931.9 - 13.9 * LargeClass_i$\\
+The reason why this is the new regression function is that if the $LargeClass_i$ variable is equal to 0, i.e. when there is a small class, then the average test score value is 931.9 (or from the previous regression model, 918+13.9 when the $SmallClass_i$ variable is equal to 1). \\~\\
+b) Would the $R^2$ you obtained be different from the $R^2$ in question 3? Explain.\\
+No, because the variables $LargeClass_i$ and $SmallClass_i$ have a dual relationship, where each variable contains exactly the same amount of information as the other. One could think of $LargeClass_i$ and $SmallClass_i$ as being the reverse of each other, and thus their explanatory power is the same. Consequently, this makes their $R^2$ values the same.
+
+\section{Problem 5}
+a) Construct 95 percent confidence intervals for $\beta_0$ and $\beta_1$.\\
+$\hat{\beta_0} = 623.6$ and the s.e.$\hat{\beta_0} = 7.72$.\\
+$\hat{\beta_1} = .005749$ and the s.e.$\hat{\beta_1} = .001443$.\\
+Therefore the 95 percent confidence interval for both betas, which is defined as, [$\beta$ - 1.96(s.e.$\beta$), $\beta$ + 1.96(s.e.$\beta$)], is:\\
+For $\hat{\beta_0}$: [608.469, 638.731]\\
+For $\hat{\beta_1}$: [.00292, .00858]\\~\\
+b) A local congressman claimed that increasing per-student expenditure by 1000 dollars would increase average test scores by at least 3 points. Test the congressman's claim. You may use a 5 percent level of significance.\\
+
+
+
+\end{document}  
