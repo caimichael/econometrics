@@ -78,7 +78,34 @@ $\hat{\beta_1} = .005749$ and the s.e.$\hat{\beta_1} = .001443$.\\
 Therefore the 95 percent confidence interval for both betas, which is defined as, [$\beta$ - 1.96(s.e.$\beta$), $\beta$ + 1.96(s.e.$\beta$)], is:\\
 For $\hat{\beta_0}$: [608.469, 638.731]\\
 For $\hat{\beta_1}$: [.00292, .00858]\\~\\
-b) A local congressman claimed that increasing per-student expenditure by 1000 dollars would increase average test scores by at least 3 points. Test the congressman's claim. You may use a 5 percent level of significance.\\
+b) A local congressman claimed that increasing per-student expenditure by 1000 dollars would increase average test scores by at least 3 points. Test the congressman's claim. You may use a 5 percent level of significance.\\~\\
+To test this claim, we must see if a 1000 unit increase in $\beta_1$ will produce at least a 3 point increase in average test scores at the 5 percent significance level.\\
+The model that we estimated is:\\
+$TS_i = 623.6 + .005749Expenditure_i$ where s.e.$\beta_0 = 80.783$ and the s.e.$\beta_1 = .001443$.\\
+Therefore the $\hat{\beta_1}$ that we are testing against is $1000*.005749 = 5.749$ with a standard error of $1000*.001443 = 1.443$.\\
+We formulate our hypotheses:\\
+$H_0: \beta_1 < 3$\\
+$H_1: \beta_1 \geq 3$\\
+Now we calculate the t-statistic:\\
+$t = \frac{\hat{\beta_1} - \beta_{1,0}}{s.e.\hat{\beta_1}}$\\
+$t = \frac{5.749 - 3}{1.443} = 1.905$\\
+Then we calculate the p-value from the normal distribution given this t-statistic.\\
+$p = \Phi(1.905) = .0568$\\
+Because this is greater than our $\alpha = 0.05$ we cannot reject the $H_0$. Therefore the congressman's claim is not statistically significant.\\~\\
+c) Redo parts a) - b) using heteroskedasticity-consistent standard errors.\\
+The confidence intervals for $\beta_0$ and $\beta_1$:\\
+$\hat{\beta_0} = 617.87$ and the s.e.$\hat{\beta_0} = 10.215$.\\
+$\hat{\beta_1} = .0057488$ and the s.e.$\hat{\beta_1} = .0016428$.\\
+Therefore the 95 percent confidence interval for both betas, which is defined as, [$\beta$ - 1.96(s.e.$\beta$), $\beta$ + 1.96(s.e.$\beta$)], is:\\
+For $\hat{\beta_0}$: [597.8486, 637.8914]\\
+For $\hat{\beta_1}$: [.002528912, .008968688]\\~\\
+Testing the congressman's claim again we have the same hypotheses:\\
+$H_0: \beta_1 < 3$\\
+$H_1: \beta_1 \geq 3$\\
+Now we calculate the t-statistic based on the values $\hat{\beta_1}$ and s.e.$\hat{\beta_1}$ * 1000:\\
+$t = \frac{\hat{\beta_1} - \beta_{1,0}}{s.e.\hat{\beta_1}}$\\
+$t = \frac{5.7488 - 3}{1.6428} = 1.67324$\\
+Seeing as this t-statistic is even lower (more moderate) than our previous one, the p-value for this t-statistic will also be larger than the previous one, and thus changing to heteroskedasticity-consistent errors does not change the answer that the claim is not statistically significant.\\
 
 
 
