@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  16 FEB 2016 12:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  16 FEB 2016 20:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -228,72 +228,62 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--32
 [1
 
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 34--46
+Underfull \hbox (badness 10000) in paragraph at lines 34--47
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 34--46
+Underfull \hbox (badness 10000) in paragraph at lines 34--47
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 34--46
+Underfull \hbox (badness 10000) in paragraph at lines 34--47
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 34--46
+Underfull \hbox (badness 10000) in paragraph at lines 49--67
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 34--46
+Underfull \hbox (badness 10000) in paragraph at lines 49--67
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 48--66
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 48--66
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 48--66
+Underfull \hbox (badness 10000) in paragraph at lines 49--67
 
  []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 68--73
+Underfull \hbox (badness 10000) in paragraph at lines 69--74
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 75--109
+Underfull \hbox (badness 10000) in paragraph at lines 76--110
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 75--109
+Underfull \hbox (badness 10000) in paragraph at lines 76--110
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 75--109
+Underfull \hbox (badness 10000) in paragraph at lines 76--110
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 75--109
+Underfull \hbox (badness 10000) in paragraph at lines 76--110
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 75--109
+Underfull \hbox (badness 10000) in paragraph at lines 76--110
 
  []
 
@@ -320,7 +310,7 @@ fonts/cm/cmsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsf
 onts/cm/cmsy8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfon
 ts/cm/cmti10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfont
 s/symbols/msbm10.pfb>
-Output written on assignment2_econo.pdf (5 pages, 143019 bytes).
+Output written on assignment2_econo.pdf (5 pages, 143075 bytes).
 PDF statistics:
  72 PDF objects out of 1000 (max. 8388607)
  51 compressed objects within 1 object stream

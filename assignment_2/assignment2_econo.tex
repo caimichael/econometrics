@@ -32,17 +32,18 @@ Therefore, there would be a change in the sign of the coefficient of X because u
 
 \section{Problem Two}
 Consider the model $Y_i = \beta_0 + \beta_1X_i + u_i$ where $X$ and $Y$ are as defined in question 1. Suppose you are told that the standard error of $\hat{\beta_1}$ is 0.096. Based on this and the estimates presented in question 1:\\~\\
-a) What is the p-value of a test of the hypothesis $H_0: \beta_1 = 1$ against $H_1: \beta_1 >1$?\\
+a) What is the p-value of a test of the hypothesis $H_0: \beta_1 = 2$ against $H_1: \beta_1 >2$?\\
 First we must calculate the t-statistic, which is defined as $t = \frac{\hat{\beta_1} - \beta_{1,0}}{s.e.(\hat{\beta_1})}$.\\
 $t = \frac{2.430 - 2}{0.096} = 4.479$\\
 Then we calculate the p-value from the normal distribution based on this t-statistic.\\
-For a t-statistic of 4.479 the corresponding p-value is $1 - \Phi(4.479)$ which is  $< 0.00001$.\\~\\
+For a t-statistic of 4.479 the corresponding p-value for a right-tailed test is $1 - \Phi(4.479)$ which is $= 3.75 * 10^{-6}$\\
 b) What is the p-value of a test of the hypothesis $H_0: \beta_1 = 2$ against $H_1: \beta_1 \neq 2$?\\
-The t-statistic is calculated the same way as in part a), but the difference is that instead of computing it was $1 - \Phi(x)$ you have to double it to account for both tails. Therefore the p-value is equal to $2(1-\Phi(4.479)$ which is still very small at $<0.00002$. \\~\\
-c) Yes, they are different because you must account for both tails of the distribution when calculating a two-tailed test.\\~\\
+The t-statistic is calculated the similarly to part a), but the difference is that instead of computing just $1 - \Phi(x)$ you must add the other side.\\
+$p = (1-\Phi(4.479)) + \Phi(-4.479) = 7.5 * 10^{-6}$\\
+c) Yes, they are different because in a), we were calculating a right tailed test, but for b) we had to account for both tails. \\~\\
 d) To construct a 95 percent confidence interval, we must calculate the interval of $[\hat{\beta_1} - 1.96(s.e. \hat{\beta_1}), \hat{\beta_1} + 1.96(s.e. \hat{\beta_1})]$.\\
-$[\hat{\beta_1} - 1.96(s.e. \hat{\beta_1}), \hat{\beta_1} + 1.96(s.e. \hat{\beta_1})] = [4.479 - 1.96(0.096), 4.479 + 1.96(0.096)]$\\
-$ = [4.29084, 4.66716]$ is the 95 percent confidence interval for $\beta_1$.\\
+$[\hat{\beta_1} - 1.96(s.e. \hat{\beta_1}), \hat{\beta_1} + 1.96(s.e. \hat{\beta_1})] = [2.430 - 1.96(0.096), 2.430 + 1.96(0.096)]$\\
+$ = [2.24184, 2.61816]$ is the 95 percent confidence interval for $\beta_1$.\\
 
 \section{Problem Three}
 a) Interpret the estimated slope coefficient.\\
@@ -60,7 +61,7 @@ p-value = $2\Phi(5.56) \approx 0$.\\
 Because the p-value of 0 is less than 0.05, we can reject the $H_0$ and say that the effect of class size on test score is statistically significant with 95 percent confidence.\\~\\
 d) Construct a 95 percent confidence interval for the effect of SmallClass on TestScore.\\
 $[\hat{\beta_1} - 1.96(s.e. \hat{\beta_1}), \hat{\beta_1} + 1.96(s.e. \hat{\beta_1})] = [13.9 - 1.96(2.5), 13.9+1.96(2.5)]$\\
-$ = [9.15, 18.65]$\\
+$ = [9, 18.8]$\\
 e) Do you think the regression errors are plausibly homoskedastic?\\
 Yes, because the variance for a small class versus a large class in terms of test score looks like it would be the same.
 

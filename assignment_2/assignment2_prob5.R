@@ -9,6 +9,7 @@
 require("graphics")
 require("stats")
 require("AER")
+require("sandwich")
 
 #####################################################################################
 # load data and rename
@@ -27,15 +28,17 @@ CAS$ts <- (CAS$math+CAS$read)/2
 # student teacher ratio
 CAS$str <- CAS$students/CAS$teachers 
 
-# Increasing expenditure by 1000
-CAS$incexpenditure <- 1000 + CAS$expenditure
 
 #####################################################################################
 # estimate regression
 #####################################################################################
 
+
+
 # regress ts on str and store in fm
 fm1 <- lm(ts ~ expenditure, data=CAS)
+coeftest(fm, df=Inf, vcov = vcovHC(fm))
+
 fm2 <- lm(ts ~ incexpenditure, data=CAS)
 # print summary
 summary(fm1)
