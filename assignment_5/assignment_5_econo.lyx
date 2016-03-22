@@ -1,0 +1,486 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Assignment 5
+\end_layout
+
+\begin_layout Author
+Michael Cai
+\end_layout
+
+\begin_layout Subparagraph*
+1a) Consider the regression 
+\begin_inset Formula $Y_{i}=\beta_{0}+\beta_{1}X_{1i}+ui$
+\end_inset
+
+.
+ Do you think that 
+\begin_inset Formula $E[u_{i}|X_{i}]=0?$
+\end_inset
+
+ Is the OLS estimator of 
+\begin_inset Formula $\beta_{1}$
+\end_inset
+
+ unbiased and consistent? Explain.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $E[u_{i}|X_{1i}]\neq0$
+\end_inset
+
+ because there is important information contained in the 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+ that is not controlled for by random selection to create the classes, namely
+ 
+\begin_inset Formula $X_{2i}$
+\end_inset
+
+.
+ If current students and new students were randomly and evenly placed into
+ small/regular sized classes, then there would be no bias and there would
+ be consistency in the estimation of 
+\begin_inset Formula $\beta_{1}$
+\end_inset
+
+ ;however, because 20% of the new students are assigned to the small-sized
+ classes and 80% are assigned to the regular-sized classes, there are more
+ new students in regular sized classes than there are in small classes.
+ This is a case of sample selection bias, and thus the OLS assumption 1
+ is violated and consequently the OLS estimator of 
+\begin_inset Formula $\beta_{1}$
+\end_inset
+
+ is biased and inconsistent.
+\end_layout
+
+\begin_layout Subparagraph*
+1b) Consider the regression 
+\begin_inset Formula $Y_{i}=\beta_{0}+\beta_{1}X_{1i}+\beta_{2}X_{2i}+ui.$
+\end_inset
+
+ Do you think that 
+\begin_inset Formula $E[u_{i}|X_{1i},X_{2i}]$
+\end_inset
+
+ depends on 
+\begin_inset Formula $X_{1}$
+\end_inset
+
+? Is the OLS estimator of 
+\begin_inset Formula $\beta_{1}$
+\end_inset
+
+ unbiased and consistent? Explain.
+ Do you think that 
+\begin_inset Formula $E[u_{i}|X_{1i},X_{2i}]$
+\end_inset
+
+ depends on 
+\begin_inset Formula $X_{2}?$
+\end_inset
+
+ Will the OLS estimator of 
+\begin_inset Formula $\beta_{2}$
+\end_inset
+
+ provide an unbiased and consistent estimate of the causal effect of transferrin
+g to a new school (that is, being a newly enrolled student)? Explain.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The first two questions basically ask: 
+\begin_inset Formula $E[u_{i}|X_{1i},X_{2i}]=E[u_{i}|X_{2i}]$
+\end_inset
+
+ and 
+\begin_inset Formula $\hat{\beta_{1}}\rightarrow_{p}\beta_{1}$
+\end_inset
+
+.
+ Or rather, if you were to control for whether or not a student was newly
+ enrolled, does the class size have explanatory power over test scores.
+ The answer is yes, and thus the conditional mean independence does not
+ hold.
+ The class size, as we spoke about during lecture, still proxies for many
+ other aspects of a school district such as income level, which is positively
+ correlated with test scores and has a non-zero covariance with class size
+ (assuming wealthier school districts can afford more instructors and thus
+ more personalized classroom experiences resulting in a smaller student
+ to teacher ratio).
+ Therefore, the OLS estimator of 
+\begin_inset Formula $\beta_{1}$
+\end_inset
+
+ will be biased and inconsistent.
+ 
+\end_layout
+
+\begin_layout Standard
+The second two questions ask: 
+\begin_inset Formula $E[u_{i}|X_{1i},X_{2i}]=E[u_{i}|X_{1i}]$
+\end_inset
+
+ and 
+\begin_inset Formula $\hat{\beta_{2}}\rightarrow\beta_{2}$
+\end_inset
+
+.
+ Or rather, if you were to control for the class size, does the fact that
+ a student was newly enrolled have explanatory power over test scores.
+ The answer is likely no, assuming that these new students enrolling are
+ not all coming from say a non-English speaking background.
+ Therefore, the conditional mean independence holds, and we can thus use
+ the following derivation to prove that 
+\begin_inset Formula $\hat{\beta_{2}}$
+\end_inset
+
+ is a consistent and unbiased estimator of 
+\begin_inset Formula $\beta_{2}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Assuming these are true:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $Y_{i}=\beta_{0}+\beta_{1}X_{1i}+\beta_{2}X_{2i}+u_{i}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $u_{i}=E[u_{i}|X_{1i},X_{2i}]+v_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Therefore:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $Y_{i}=\beta_{0}+\beta_{1}X_{1i}+\beta_{2}X_{2i}+E[u_{i}|X_{1i},X_{2i}]+v_{i}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+And using the conditional mean independence assumption that: 
+\begin_inset Formula $E[u_{i}|X_{1i},X_{2i}]=E[u_{i}|X_{1i}]$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $Y_{i}=\beta_{0}+\beta_{1}X_{1i}+\beta_{2}X_{2i}+E[u_{i}|X_{1i}]+v_{i}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Assuming that 
+\begin_inset Formula $E[u_{i}|X_{1i}]$
+\end_inset
+
+ follows the form 
+\begin_inset Formula $a+bX_{1i}$
+\end_inset
+
+ we get:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $Y_{i}=(\beta_{0}+a)+(\beta_{1}+b)X_{1i}+\beta_{2}X_{2i}+v_{i}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Therefore, we have proven that although the intercept and 
+\begin_inset Formula $\beta_{1}$
+\end_inset
+
+ estimator will be biased, the estimator for 
+\begin_inset Formula $\beta_{2}$
+\end_inset
+
+ will be an unbiased and consistent estimator for the causal effect of transferr
+ing to a new school (being a newly enrolled student).
+\end_layout
+
+\begin_layout Subparagraph
+2.
+ (All written)
+\end_layout
+
+\begin_layout Subparagraph
+3a) Estimate three regression models and construct 95% confidence intervals
+ for the estimated effect of smoking on birth weigh using each of the three
+ regressions.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $[\beta_{1}-1.96(s.e.\beta_{1}),\beta_{1}+1.96(s.e.\beta_{1})]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+1.
+ [-305.83636, -200.61964]
+\end_layout
+
+\begin_layout Standard
+2.
+ [-268.851348, -166.308852]
+\end_layout
+
+\begin_layout Standard
+3.
+ [-228.075224, -122.678576]
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subparagraph
+3b) Does the coefficient on smoker in the first and second regressions suffer
+ from omitted variables bias? Explain.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The coefficient on smoker in the first regression suffers from omitted variables
+ bias because knowing that a person, who is pregnant with a child, is also
+ a smoker should also imply that that person is engaged in other activities,
+ such as drinking during pregnancy (as shown in the second regression),
+ and other reckless behaviors that would likely adversely affect birthweight.
+ The second regression, which does include alcohol consumption and also
+ pre-natal visits, which I am assuming is a proxy for how responsible the
+ mother is in regards to checking on her baby's health, still might suffer
+ from the similar issue of OVB due to other behaviors that may not have
+ been taken into account, for instance junk food or unhealthy food consumption,
+ but the strongest indicators for reckless behavior are more or less accounted
+ for in the second regression.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subparagraph
+3c) Consider the coefficient on unmarried in the third regression.
+ A family advocacy group notes that the large coefficient suggests that
+ public policies that encourage marriage will lead, on average, to healthier
+ babies.
+ Do you agree?
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+I do not necessarily agree, and I do believe that the unmarried variable
+ acts as a control variable as opposed to a regressor.
+ Whether or not a person is unmarried - all else held constant - should
+ not affect the babies health or birthweight.
+ Unmarried is more likely a proxy for other important life circumstances
+ that the mother is going through during the pregnancy, for instance stress
+ levels would likely be higher in an unmarried pregnancy because the mother
+ is likely a single mother, or is dealing with the stress of figuring out
+ a pregnancy with a boyfriend (which I am assuming is on average a less
+ stable relationship than one with a legal spouse).
+ Unmarried can also be controlling for income as well, since on average
+ single pregnant women tend to be of lower income and social status than
+ married pregnant women.
+ And lastly, unmarried could also be a proxy for age and thus related to
+ the health of the mother since it is more likely that younger people will
+ be unmarried as opposed to older people.
+\end_layout
+
+\end_body
+\end_document
