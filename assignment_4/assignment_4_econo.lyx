@@ -1,0 +1,1127 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+logicalmkup
+\end_modules
+\maintain_unincluded_children false
+\begin_local_layout
+Format 49
+InsetLayout Flex:Code
+    LyxType               charstyle
+    LabelString           code
+    LatexType             command
+    LatexName             code
+    Font
+      Family              Typewriter
+    EndFont
+    Preamble
+    \newcommand{\code}[1]{\texttt{#1}}
+    EndPreamble
+    InToc                 true
+    HTMLTag               code
+ResetsFont true
+End
+\end_local_layout
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Assignment 4
+\end_layout
+
+\begin_layout Author
+Michael Cai
+\end_layout
+
+\begin_layout Subparagraph
+1.
+ Let 
+\begin_inset Formula $C_{t}$
+\end_inset
+
+ be consumption and 
+\begin_inset Formula $X_{t}$
+\end_inset
+
+ be a predictor of consumption.
+ Suppose you have quarterly data on 
+\begin_inset Formula $C$
+\end_inset
+
+ and 
+\begin_inset Formula $X.$
+\end_inset
+
+ Let 
+\begin_inset Formula $D_{1t},D_{2t},D_{3t},$
+\end_inset
+
+ and 
+\begin_inset Formula $D_{4t}$
+\end_inset
+
+ be dummy variables such that 
+\begin_inset Formula $D_{1t}$
+\end_inset
+
+ takes the value 1 in quarter 1 and 0 otherwise, etc.
+ Which of the following, if any suffer from perfect multicollinearity and
+ why?
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+a) 
+\end_layout
+
+\begin_layout Standard
+Q1: 
+\begin_inset Formula $C_{t}=\alpha+\beta X_{t}+\gamma_{1}X_{t}+u_{t}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Q2: 
+\begin_inset Formula $C_{t}=\alpha+\beta X_{t}+\gamma_{2}X_{t}+u_{t}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Q3: 
+\begin_inset Formula $C_{t}=\alpha+\beta X_{t}+\gamma_{3}X_{t}+u_{t}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Q4: 
+\begin_inset Formula $C_{t}=\alpha+\beta X_{t}+\gamma_{4}X_{t}+u_{t}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Yes, this model suffers from perfect multicolllinearity because you have
+ dummy variables for all four quarters.
+ Thus the linear combination of Q1 + Q2 + Q3 + Q4 equals the 
+\begin_inset Quotes eld
+\end_inset
+
+dummy
+\begin_inset Quotes erd
+\end_inset
+
+ variable for the constant 
+\begin_inset Formula $\alpha.$
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+b)
+\end_layout
+
+\begin_layout Standard
+Q1: 
+\begin_inset Formula $C_{t}=\alpha+\beta X_{t}+\gamma_{1}X_{t}+u_{t}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Q2: 
+\begin_inset Formula $C_{t}=\alpha+\beta X_{t}+\gamma_{2}X_{t}+u_{t}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Q3: 
+\begin_inset Formula $C_{t}=\alpha+\beta X_{t}+\gamma_{3}X_{t}+u_{t}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Q4: 
+\begin_inset Formula $C_{t}=\alpha+\beta X_{t}+\gamma_{4}X_{t}+u_{t}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Yes.
+ Although the model looks slightly different than the first model, they
+ are mathematically equivalent and thus this model also suffers from perfect
+ multicollinearity.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+c)
+\end_layout
+
+\begin_layout Standard
+Q1: 
+\begin_inset Formula $C_{t}=\alpha+\delta_{1}+\gamma_{1}X_{t}+u_{t}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Q2: 
+\begin_inset Formula $C_{t}=\alpha+\delta_{2}+\gamma_{2}X_{t}+u_{t}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Q3: 
+\begin_inset Formula $C_{t}=\alpha+\gamma_{3}X_{t}+u_{t}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Q4: 
+\begin_inset Formula $C_{t}=\alpha+\gamma_{4}X_{t}+u_{t}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Yes, this model also suffers from perfect multicollinearity since there
+ are again 4 dummy variables for 4 possible outcomes (if there are m possible
+ outcomes, there must be m-1 dummy variables if you are to include an intercept,
+ or else there will be perfect multicollinearity with the intercept).
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+d) 
+\end_layout
+
+\begin_layout Standard
+Q1: 
+\begin_inset Formula $C_{t}=\alpha+\delta_{1}+\beta X_{t}+\gamma_{1}X_{t}+u_{t}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Q2: 
+\begin_inset Formula $C_{t}=\alpha+\delta_{2}+\beta X_{t}+\gamma_{2}X_{t}+u_{t}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Q3: 
+\begin_inset Formula $C_{t}=\alpha+\beta X_{t}+\gamma_{3}X_{t}+u_{t}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Q4: 
+\begin_inset Formula $C_{t}=\alpha+\beta X_{t}+u_{t}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+No, this model does not suffer from perfect multicollinearity because the
+ intercept term acts as the value of 
+\begin_inset Formula $C_{t}$
+\end_inset
+
+ when the outcome is Q4, thus the values of Q1-Q3 are in reference to the
+ values in Q4 and thus there is no extraneous dummy variable.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subparagraph
+2.
+ a) In models (a)-(d) of question 1, what are the slope coefficients of
+ 
+\begin_inset Formula $X_{t}$
+\end_inset
+
+ in each of the 4 quarters? b) Suppose you estimate model (c) and wrote
+ down the estimated slope coefficients for 
+\begin_inset Formula $X_{t}$
+\end_inset
+
+ in each of the 4 quarters.
+ You then estimate model (d) and write down the estimated slope coefficients
+ for 
+\begin_inset Formula $X_{t}$
+\end_inset
+
+ in each of the 4 quarters.
+ Do your estimates change? Why or why not?
+\end_layout
+
+\begin_layout Standard
+a)
+\end_layout
+
+\begin_layout Standard
+(a) 
+\end_layout
+
+\begin_layout Standard
+Q1: 
+\begin_inset Formula $(\beta+\gamma_{1})$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Q2: 
+\begin_inset Formula $(\beta+\gamma_{2})$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Q3: 
+\begin_inset Formula $(\beta+\gamma_{3})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Q4: 
+\begin_inset Formula $(\beta+\gamma_{4})$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+(b) 
+\end_layout
+
+\begin_layout Standard
+Q1: 
+\begin_inset Formula $(\beta+\gamma_{1})$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Q2: 
+\begin_inset Formula $(\beta+\gamma_{2})$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Q3: 
+\begin_inset Formula $(\beta+\gamma_{3})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Q4: 
+\begin_inset Formula $(\beta+\gamma_{4})$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+(c)
+\end_layout
+
+\begin_layout Standard
+Q1: 
+\begin_inset Formula $\gamma_{1}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Q2: 
+\begin_inset Formula $\gamma_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Q3: 
+\begin_inset Formula $\gamma_{3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Q4: 
+\begin_inset Formula $\gamma_{4}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(d) 
+\end_layout
+
+\begin_layout Standard
+Q1: 
+\begin_inset Formula $(\beta+\gamma_{1})$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Q2: 
+\begin_inset Formula $(\beta+\gamma_{2})$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Q3: 
+\begin_inset Formula $(\beta+\gamma_{3})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Q4: 
+\begin_inset Formula $\beta$
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+b) 
+\end_layout
+
+\begin_layout Standard
+No, they do not change.
+ In (d) the slope coefficients are all based on the slope coefficient for
+ the 4th quarter, 
+\begin_inset Formula $\beta,$
+\end_inset
+
+ whereas the slope coefficients in (c) have are not; however, the use of
+ an extra letter to represent the slope coefficients is arbitrary.
+ 
+\end_layout
+
+\begin_layout Standard
+To make the two models symbolically equivalent, let's consider the gammas
+ in model (c), 
+\begin_inset Formula $\gamma,$
+\end_inset
+
+ to instead be gamma primes, 
+\begin_inset Formula $\gamma'.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Then you would just change the 
+\begin_inset Formula $\beta$
+\end_inset
+
+ in Q4 of model (d) to be 
+\begin_inset Formula $\gamma_{4}'$
+\end_inset
+
+, and then 
+\begin_inset Formula $\gamma_{1}'=\gamma_{4}'+\gamma_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $\gamma_{2}'=\gamma_{4}'+\gamma_{2}$
+\end_inset
+
+, etc.
+ 
+\end_layout
+
+\begin_layout Standard
+The estimates remain the same because structurally the two equations are
+ equivalent there are only arbitrary differences in the labeling of the
+ coefficients.
+ 
+\end_layout
+
+\begin_layout Subparagraph
+3.
+ Determine whether the following are true or false and explain why: a) Adjusted
+ 
+\begin_inset Formula $R^{2}$
+\end_inset
+
+ can be negative.
+ b) Adjusted 
+\begin_inset Formula $R^{2}$
+\end_inset
+
+ can be larger than 1.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+a) 
+\end_layout
+
+\begin_layout Standard
+The definition of adjusted 
+\begin_inset Formula $R^{2}$
+\end_inset
+
+ is 
+\begin_inset Formula $\bar{{R^{2}}}=1-(1-R^{2})\frac{n-1}{n-p-1}=R^{2}-(1-R^{2})\frac{p}{n-p-1}$
+\end_inset
+
+ , where 
+\begin_inset Formula $p$
+\end_inset
+
+ is the number of explanatory variables, and 
+\begin_inset Formula $n$
+\end_inset
+
+ is the sample size.
+ 
+\end_layout
+
+\begin_layout Standard
+As you can see by the definition, if 
+\begin_inset Formula $R^{2}$
+\end_inset
+
+ is close to zero, which means if the explanatory power of the first explanatory
+ variable is close to zero then it is possible that the adjusted 
+\begin_inset Formula $R^{2}$
+\end_inset
+
+ becomes negative.
+ 
+\end_layout
+
+\begin_layout Standard
+True.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+b)
+\end_layout
+
+\begin_layout Standard
+Also from the definition of adjusted 
+\begin_inset Formula $R^{2}$
+\end_inset
+
+, we see that the adjusted 
+\begin_inset Formula $R^{2}$
+\end_inset
+
+ can never exceed one because the first equation, 
+\begin_inset Formula $\bar{R^{2}}=1-(1-R^{2})\frac{n-1}{n-p-1}$
+\end_inset
+
+ , shows that the value of adjusted 
+\begin_inset Formula $R^{2}$
+\end_inset
+
+ has a maximum bound of 1 (
+\begin_inset Formula $R^{2}\leq1,$
+\end_inset
+
+ and 
+\begin_inset Formula $\frac{n-1}{n-p-1}$
+\end_inset
+
+ is strictly positive since you can't have a sample size of less than 0).
+ 
+\end_layout
+
+\begin_layout Subparagraph
+4.
+ Estimate this regression model in R etc.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+a)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $EARN_{i}=\beta_{0}+\beta_{1}GEN_{i}+\beta_{2}ED_{i}+\beta_{3}GEN_{i}ED_{i}+u_{i}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\hat{\beta_{0}}=-11325.3$
+\end_inset
+
+ with 
+\begin_inset Formula $s.e.\hat{\beta_{0}}=3848.0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\hat{\beta_{1}}=-2677.9$
+\end_inset
+
+ with 
+\begin_inset Formula $s.e.\hat{\beta_{1}}=5777.47$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\hat{\beta_{2}}=2203.3$
+\end_inset
+
+ with 
+\begin_inset Formula $s.e.\hat{\beta_{2}}=282.1$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\hat{\beta_{3}}=1017.4$
+\end_inset
+
+ with 
+\begin_inset Formula $s.e.\hat{\beta_{3}}=420.2$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Adjusted 
+\begin_inset Formula $R^{2}=0.1966$
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+b)
+\end_layout
+
+\begin_layout Standard
+95% Confidence Interval for 
+\begin_inset Formula $\beta_{1}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $[-14001.7412,8645.9412]$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+95% Confidence Interval for 
+\begin_inset Formula $\beta_{2}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $[1650.384,2756.216]$
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+c)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $H_{0}:\beta_{3}=0$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $H_{1}:\beta_{3}>0$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $t=\frac{\hat{\beta_{3}}-\beta_{3,0}}{s.e.\hat{\beta_{3}}}=\frac{1017.4-0}{420.2}=2.421228$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+p-value = 
+\begin_inset Formula $1-\phi(2.421228)=0.007734<0.05$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Therefore, we reject the null hypothesis and say that 
+\begin_inset Formula $\beta_{3}$
+\end_inset
+
+ is significant.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+d)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $H_{0}:\beta_{1}=\beta_{3}=0$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $H_{1}:\beta_{i}\neq0$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+We are testing 
+\begin_inset Formula $EARN_{i}=\beta_{0}+\beta_{2}ED_{i}$
+\end_inset
+
+ against the full model.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+fm0 <- lm(EARN ~ ED, data=incomedata)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+fm1 <- lm(EARN ~ GEN + ED + GENED, data=incomedata)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+waldtest(fm0,fm1,vcov=vcovHC,test=
+\begin_inset Quotes erd
+\end_inset
+
+Chisq
+\begin_inset Quotes erd
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Thus, the waldtest gives a p-value that is well below a 5% level of significance
+, and thus we can reject the null hypothesis and say that at at least one
+ of the two 
+\begin_inset Formula $\beta$
+\end_inset
+
+s is significant.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+e)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $LOGINC_{i}=\beta_{0}+\beta_{1}GEN_{i}+\beta_{2}ED_{i}+\beta_{3}GEN_{i}ED_{i}+u_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $H_{0}:\beta_{3}=0$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $H_{1}:\beta_{3}>0$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $t=\frac{\hat{\beta_{3}}-\beta_{3,0}}{s.e.\hat{\beta_{3}}}=\frac{-0.03858-0}{0.02006}=-1.923$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+p-value = 
+\begin_inset Formula $0.02724$
+\end_inset
+
+, which is still less than 
+\begin_inset Formula $0.05$
+\end_inset
+
+, however had it been a two-tailed test, then the p-value would have been
+ greater than 
+\begin_inset Formula $0.05$
+\end_inset
+
+ and thus we would not be able to reject the null hypothesis in that case.
+\end_layout
+
+\end_body
+\end_document
