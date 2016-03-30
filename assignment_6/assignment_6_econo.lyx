@@ -1,0 +1,825 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Assignment 6
+\end_layout
+
+\begin_layout Author
+Michael Cai
+\end_layout
+
+\begin_layout Subparagraph
+1.
+ Determine whether the following models are linear in the parameters, or
+ the variables, or both.
+ Which of these models can you estimate using OLS?
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+a) 
+\begin_inset Formula $Y_{i}=\beta_{0}+\beta_{1}(\frac{1}{X_{i}})+u_{i}$
+\end_inset
+
+ is linear in parameters but not in variables since 
+\begin_inset Formula $\frac{1}{X_{i}}$
+\end_inset
+
+ is not a linear term.
+ 
+\end_layout
+
+\begin_layout Standard
+b) 
+\begin_inset Formula $logY_{i}=log(\beta_{0})+\beta_{1}log(X_{i})+u_{i}$
+\end_inset
+
+ is not linear in either parameters or variables.
+\end_layout
+
+\begin_layout Standard
+c) 
+\begin_inset Formula $logY_{i}=\beta_{0}-\beta_{1}(\frac{1}{X_{i}})+u_{i}$
+\end_inset
+
+ is linear in parameters but not in variables.
+\end_layout
+
+\begin_layout Standard
+d) 
+\begin_inset Formula $logY_{i}=\beta_{0}-\beta_{1}(\frac{1}{X_{i}})+\beta_{2}exp(X_{i})+u_{i}$
+\end_inset
+
+ is linear in parameters but not in variables.
+\end_layout
+
+\begin_layout Standard
+e) 
+\begin_inset Formula $logY_{i}=\beta_{0}-\beta_{1}(\frac{1}{X_{i}})+\beta_{2}logY_{i}+u_{i}$
+\end_inset
+
+ is linear in parameters but not in variables.
+\end_layout
+
+\begin_layout Standard
+You can estimate a)-c) using OLS, but you cannot use OLS for d) (perfect
+ multicollinearity of regressors) and neither for e) (simultaneous causality
+ bias).
+ 
+\end_layout
+
+\begin_layout Subparagraph
+2a) Do you think that your estimate of 
+\begin_inset Formula $\beta_{1}$
+\end_inset
+
+ would be biased due to measurement error? If so, in what direction would
+ your estimates be biased?
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+No because although the private investment measure might be subject to measureme
+nt error, measurement error in the dependent variable in this case 
+\begin_inset Formula $I_{i}$
+\end_inset
+
+ is not a problem as long as that measurement error is not correlated with
+ the regressor, 
+\begin_inset Formula $G_{i}$
+\end_inset
+
+, then the residual will just equal 
+\begin_inset Formula $u_{i}-\epsilon$
+\end_inset
+
+ instead of just 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $I_{i}+\epsilon=I_{i}^{*}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $I_{i}^{*}=\beta_{0}+\beta_{1}G_{i}+(u_{i}-\epsilon)$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Subparagraph
+2b) Do you think that your estimate of 
+\begin_inset Formula $\beta_{1}$
+\end_inset
+
+ would be biased due to measurement error? If so, in what direction would
+ your estimates be biased?
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $log(\frac{I_{i}}{P_{i}})=\beta_{0}+\beta_{1}log(\frac{G_{i}}{P_{i}})=u_{i}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+With measurement error:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $P_{i}+\epsilon=P_{i}^{*}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $log(\frac{I_{i}}{P_{i}^{*}-\epsilon})=\beta_{0}+\beta_{1}log(\frac{G_{i}}{P_{i}^{*}-\epsilon})+u_{i}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $log(I_{i})-log(P_{i}^{*}-\epsilon)=\beta_{0}+\beta_{1}log(G_{i})-\beta_{1}log(P_{i}^{*}-\epsilon)+u_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $log(I_{i})=\beta_{0}+\beta_{1}log(G_{i})-(1-\beta_{1})[log(P_{i}^{*}-\epsilon)-log(P_{i}^{*}-\epsilon)]+u_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $log(I_{i})=\beta_{0}+\beta_{1}log(G_{i})-(1-\beta_{1})log(\frac{P_{i}^{*}-\epsilon}{P_{i}^{*}-\epsilon})+u_{i}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $log(I_{i})=\beta_{0}+\beta_{1}log(G_{i})+u_{i}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+The log term with the 
+\begin_inset Formula $P$
+\end_inset
+
+'s disappears because log(1)=0.
+ Thus there is no measurement error.
+\end_layout
+
+\begin_layout Standard
+*Not sure if this process is entirely correct because although I believe
+ the algebra is correct, conceptually a measurement error in the regressor
+ should result in bias.
+\end_layout
+
+\begin_layout Subparagraph
+3q) Consider the regression model: 
+\begin_inset Formula $Y_{i}=\beta_{0}+\beta_{1}X_{1i}+\beta_{2}X_{2i}+\beta_{3}X_{1i}X_{2i}+u_{i}$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subparagraph
+3a) Calculate the marginal effect on 
+\begin_inset Formula $Y$
+\end_inset
+
+ of a change in 
+\begin_inset Formula $X_{1}$
+\end_inset
+
+ (holding 
+\begin_inset Formula $X_{2}$
+\end_inset
+
+ constant)
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The marginal effect on 
+\begin_inset Formula $Y$
+\end_inset
+
+ of a change in 
+\begin_inset Formula $X_{1}$
+\end_inset
+
+ holding 
+\begin_inset Formula $X_{2}$
+\end_inset
+
+ constant can be calculated by taking the f.o.c.
+ with respect to 
+\begin_inset Formula $X_{1}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{dY_{i}}{dX_{1i}}=\beta_{1}+\beta_{3}X_{2i}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Subparagraph
+3b) Calculate the marginal effect on 
+\begin_inset Formula $Y$
+\end_inset
+
+ of a change in 
+\begin_inset Formula $X_{2}$
+\end_inset
+
+ (holding 
+\begin_inset Formula $X_{1}$
+\end_inset
+
+ constant)
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{dY_{i}}{dX_{2i}}=\beta_{2}+\beta_{3}X_{1i}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Subparagraph
+3c) Show that if 
+\begin_inset Formula $X_{1}$
+\end_inset
+
+ changes by 
+\begin_inset Formula $\Delta X_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $X_{2}$
+\end_inset
+
+ changes by 
+\begin_inset Formula $\Delta X_{2}$
+\end_inset
+
+ then 
+\begin_inset Formula $Y$
+\end_inset
+
+ changes by 
+\begin_inset Formula $\Delta Y=(\beta_{1}+\beta_{3}X_{2})\Delta X_{1}+(\beta_{2}+\beta_{3}X_{1})\Delta X_{2}+\beta_{3}\Delta X_{1}\Delta X_{2}$
+\end_inset
+
+.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So as we have seen from 3a) and 3b), the marginal effects on 
+\begin_inset Formula $Y$
+\end_inset
+
+ for a change in 
+\begin_inset Formula $X_{1}$
+\end_inset
+
+ and for a change in 
+\begin_inset Formula $X_{2}$
+\end_inset
+
+ are listed above.
+\end_layout
+
+\begin_layout Standard
+To solve for 
+\begin_inset Formula $\Delta Y$
+\end_inset
+
+ with respect to 
+\begin_inset Formula $\Delta X_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\Delta X_{2}$
+\end_inset
+
+ we basically need to 
+\begin_inset Quotes eld
+\end_inset
+
+combine
+\begin_inset Quotes erd
+\end_inset
+
+ these effects.
+ 
+\end_layout
+
+\begin_layout Standard
+The first term 
+\begin_inset Formula $(\beta_{1}+\beta_{3}X_{2})\Delta X_{1}$
+\end_inset
+
+ indicates solely the effect of changing 
+\begin_inset Formula $X_{1}$
+\end_inset
+
+ on 
+\begin_inset Formula $Y$
+\end_inset
+
+, and 
+\begin_inset Formula $(\beta_{2}+\beta_{3}X_{1})\Delta X_{2}$
+\end_inset
+
+ indicates the effect of changing 
+\begin_inset Formula $X_{2}$
+\end_inset
+
+ on 
+\begin_inset Formula $Y$
+\end_inset
+
+ (Both with the assumption of the other regressor being held constant as
+ it changes).
+ However, a third term, 
+\begin_inset Formula $\beta_{3}\Delta X_{1}\Delta X_{2}$
+\end_inset
+
+ is also necessary to define 
+\begin_inset Formula $\Delta Y$
+\end_inset
+
+ because the term accounts for the changes in 
+\begin_inset Formula $\beta_{3}$
+\end_inset
+
+ if both 
+\begin_inset Formula $X_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $X_{2}$
+\end_inset
+
+ are changing simultaneously.
+ 
+\end_layout
+
+\begin_layout Subparagraph
+4a) Estimate the following regression models and report the estimated model,
+ the standard error of the regression, the 
+\begin_inset Formula $R^{2}$
+\end_inset
+
+, 
+\begin_inset Formula $\bar{R^{2},}$
+\end_inset
+
+ AIC and BIC: 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $ts_{i}=\beta_{0}+\beta_{1}str_{i}+\beta_{2}str_{i}^{2}+\beta_{3}str_{i}^{3}+\beta_{4}lunch_{i}+\beta_{5}log(income_{i})+u_{i}$
+\end_inset
+
+ (1)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $ts_{i}=\beta_{0}+\beta_{1}str_{i}+\beta_{2}str_{i}^{2}+\beta_{3}str_{i}^{3}+\beta_{4}lunch_{i}+\beta_{5}expenditure_{i}+\beta_{6}income_{i}+u_{i}$
+\end_inset
+
+ (2)
+\end_layout
+
+\begin_layout Standard
+(1)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $R^{2}=0.785$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\bar{R^{2}}=0.785$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $AIC=3030.027$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $BIC=3058.309$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+(2)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $R^{2}=0.7893$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\bar{R^{2}}=0.7873$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $AIC=3017.691$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $BIC=3050.013$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Subparagraph
+4b) On the basis of your answer to (a), does model (1) or model (2) fit
+ the data better?
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Model (2) fits the data better because all 4 measures point to model (2)
+ being the more accurate.
+\end_layout
+
+\begin_layout Subparagraph
+4c) Using model (1), what is the estimated marginal effect of student-teacher
+ ratio on test score when student-teacher ratio is (i) 16 and (ii) 24.
+ Do these estimates seem reasonable?
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{dts_{i}}{dstr}=\beta_{1}+2\beta_{2}str+3\beta_{3}str^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(i) The marginal effect when student-teacher ratio is 16 is an increase
+ of .211337 in test score for a single unit increase in student-teacher ratio.
+\end_layout
+
+\begin_layout Standard
+(ii) The marginal effect when student-teacher ratio is 24 is an increase
+ of 2.867529 in test score for a single unit increase in student-teacher
+ ratio.
+\end_layout
+
+\begin_layout Standard
+These do not seem reasonable because student teacher ratios should be negatively
+ correlated with test scores (all else held constant), assuming less teachers
+ per student would imply more individualized attention.
+\end_layout
+
+\begin_layout Subparagraph
+4d) A researcher suspects that the effect of income on test scores is different
+ in districts with small classes than in districts with large classes.
+ Describe and estimate a nonlinear specification that can be used to model
+ this form of nonlinearity.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $ts_{i}=\beta_{0}+\beta_{1}str_{i}+\beta_{2}str_{i}^{2}+\beta_{3}str_{i}^{3}+\beta_{4}lunch_{i}+\beta_{5}log(str_{i}income_{i})+u_{i}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+(Couldn't figure out how to implement a dummy variable using control flow
+ in R, otherwise would have tried 
+\begin_inset Formula $\beta_{5}SMALLCLASS_{i}log(income_{i})$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Subparagraph
+4e) Does the model fit better than model (1)?
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+It fits barely worse, but not significantly worse.
+ The 
+\begin_inset Formula $R^{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $\bar{R^{2}}$
+\end_inset
+
+ are the same, and the AIC and BIC are 3030.030 and 3058.312 respectively.
+ I suspect that the results are virtually the same because the other student-tea
+cher ratio terms in the model already control for class sizes when estimating
+ test scores.
+ The way to explicitly measure whether or not test scores are different
+ in districts with small classes vs.
+ large is by including a class-size dummy variable and seeing if the 
+\begin_inset Formula $\beta$
+\end_inset
+
+ still remains significant.
+\end_layout
+
+\end_body
+\end_document
