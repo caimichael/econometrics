@@ -1,0 +1,271 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Assignment 9 
+\end_layout
+
+\begin_layout Author
+Michael Cai
+\end_layout
+
+\begin_layout Subparagraph
+1.
+ Consider the IV regression model below and given certain conditions assess
+ whether the IV estimator is consistent.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $Y_{i}=\beta_{0}+\beta_{1}X_{i}+\beta_{2}W_{i}+u_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(a) 
+\begin_inset Formula $Cov(Z_{i},W_{i})=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\hat{\beta^{IV}}\rightarrow\frac{Cov(Z,Y)}{Cov(Z,X)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $Cov(Z,Y)=Cov(Z,\beta_{0}+\beta_{1}X_{i}+\beta_{2}W_{i}+u_{i})=\beta_{1}Cov(Z,X_{i})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Thus: 
+\begin_inset Formula $\hat{\beta^{IV}}\rightarrow\beta_{1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Yes the IV estimator is consistent.
+\end_layout
+
+\begin_layout Standard
+(b) 
+\begin_inset Formula $Cov(Z_{i},W_{i})\neq0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Then following the same procedure we instead get:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $Cov(Z,Y)=\beta_{1}Cov(Z,X_{i})+Cov(Z,W_{i})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+And thus the estimator converges in probability to 
+\begin_inset Formula $\beta_{1}+\frac{Cov(Z,W_{i})}{Cov(Z,X)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Which is thus biased and inconsistent.
+\end_layout
+
+\begin_layout Subparagraph
+2.
+ How does fertility affect labor supply?
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(a) Yes, on average women with more than two children work about 5 hours
+ less than women with less than two children.
+ 
+\end_layout
+
+\begin_layout Standard
+(b) It is inappropriate for estimating the causal effect of fertility (morekids)
+ on labor supply (weeksm1) because both of those decisions are made by the
+ mother's preference (and thus this model suffers from endogeneity).
+\end_layout
+
+\begin_layout Standard
+(c) Yes, the effect is statistically significant but not very large.
+ Couples, whose first two children are of the same sex, have a 6% higher
+ rate of having a third child when compared to couples, who do not meet
+ this criteria.
+\end_layout
+
+\begin_layout Standard
+(d) samesex is a valid instrument because 
+\begin_inset Formula $Cov(samesex,morekids)\neq0$
+\end_inset
+
+ because of the statistically significant relationship that we just identified
+ in part (c).
+ Also because 
+\begin_inset Formula $Cov(samesex,u_{i})=0$
+\end_inset
+
+ since the parents do not have the ability to choose whether or not their
+ first two children are of the same gender, thus avoiding the endogeneity
+ encountered in the initial regression.
+ 
+\end_layout
+
+\begin_layout Standard
+(e) The fertility effect now causes mothers to work on average 6 hours less
+ as opposed to the 5 hours less identified earlier using the instrument.
+ 
+\end_layout
+
+\begin_layout Standard
+(f) The Wu-Hausman test for endogeneity gave a p-value of 0.2, and thus we
+ cannot reject the null hypothesis.
+ Therefore, we cannot conclude that the regressor is endogenous.
+\end_layout
+
+\begin_layout Standard
+(g) The F-stat for morekids is large (the p-value for the F-stat is very
+ small), thus samsex is not a weak instrument for morekids.
+\end_layout
+
+\begin_layout Standard
+(h) No, my estimates do not change.
+ The instrument is still significant and the Wu-Hausman test still does
+ not have a significant p-value.
+\end_layout
+
+\begin_layout Standard
+(i) The Sargan test yields a 4.183 test statistic and a p-value of 0.124 so
+ therefore we are unable to reject the null hypothesis, and thus we cannot
+ conclude that the instruments are endogenous.
+\end_layout
+
+\begin_layout Standard
+(j) My results differ with all of the tests now being significant (Weak
+ instruments, Wu-Hausman, and Sargan).
+ This might happen because after we control for these other demographic
+ effects then the observation of data for women having more or less children
+ or working more or less will demonstrate more
+\end_layout
+
+\end_body
+\end_document
