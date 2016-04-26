@@ -1,0 +1,655 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Assignment 8
+\end_layout
+
+\begin_layout Author
+Michael Cai
+\end_layout
+
+\begin_layout Subparagraph*
+1.
+ Does putting criminals in jail reduce crime? Suppose you regressed crime
+ rates on incarceration rates and some control variables for economic conditions
+, demographics, etc.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $CRIME_{i}=\alpha_{0}+\alpha_{1}INCARC_{i}+CONTROLS+u_{i}$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(a) There might be simultaneous causality bias because higher incarceration
+ rates affect crime rates (since there might be fewer criminals on the street);
+ however, higher crime rates may also affect incarceration rates as well
+ (more crime rates means more criminals, which may mean more people that
+ need to be put in jail).
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(b) The rank/relevance condition states that 
+\begin_inset Formula $Cov(Z,X)\neq0$
+\end_inset
+
+ or more broadly that none of the variables 
+\begin_inset Formula $\{X...,W...,1\}$
+\end_inset
+
+ are perfectly collinear, where 
+\begin_inset Formula $X$
+\end_inset
+
+ represents all of the endogenous variables, and 
+\begin_inset Formula $W$
+\end_inset
+
+ represents all of the exogenous variables.
+ 
+\end_layout
+
+\begin_layout Standard
+The order/exogeneity condition states that 
+\begin_inset Formula $Cov(Z,u)=0$
+\end_inset
+
+ or intuitively that the the instrumental variables are actually exogenous.
+\end_layout
+
+\begin_layout Standard
+Lawsuits aimed at reducing prison overcrowding might be a valid instrumental
+ variable for incarceration rates because:
+\end_layout
+
+\begin_layout Standard
+(1) 
+\begin_inset Formula $Cov(Z,X)\neq0$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Lawsuits aimed at reducing prison overcrowding is correlated with incarceration
+ rates (Think higher incarceration rates, more prisoners, more lawsuits
+ aimed at reducing prison overcrowding).
+\end_layout
+
+\begin_layout Standard
+(2) 
+\begin_inset Formula $Cov(Z,u)=0$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+The 
+\begin_inset Formula $u$
+\end_inset
+
+ in this equation likely accounts for the more intangible measures of the
+ locations in question such as the culture of the neighborhoods, attitudes
+ toward crime, etc.
+\end_layout
+
+\begin_layout Standard
+We can expect that the lawsuits aimed at reducing prison overcrowding would
+ not be in any way related to the local proclivities for illegal activity.
+\end_layout
+
+\begin_layout Standard
+Thus, the two IV conditions should hold.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(c) (1) 
+\begin_inset Formula $Cov(Z,X)\neq0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For a similar reason, the number of lawyers is correlated with the number
+ of lawsuits (since the more lawsuits you have the more lawyers you would
+ need to handle the suits) and is directly correlated with the incarceration
+ rates for the same reason.
+\end_layout
+
+\begin_layout Standard
+(2) 
+\begin_inset Formula $Cov(Z,u)=0$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Again for a similar reason, the number of lawyers is not in any way related
+ to the local proclivities for crime.
+\end_layout
+
+\begin_layout Subparagraph*
+2.
+ Consider the IV regression model: 
+\begin_inset Formula $Y_{i}=\beta_{0}+\beta_{1}X_{i}+\beta_{2}W_{i}+u_{i}$
+\end_inset
+
+ when 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+ is correlated with 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $Z_{i}$
+\end_inset
+
+ is an instrument.
+ Suppose that the first three assumptions for TSLS are satisfied.
+ Which TSLS assumption is not satisfied when:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+~
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(a) If 
+\begin_inset Formula $Z_{i}$
+\end_inset
+
+ is independent of 
+\begin_inset Formula $(Y_{i},X_{i},W_{i})$
+\end_inset
+
+ then we know that the 
+\begin_inset Formula $Cov(Z,X)=0$
+\end_inset
+
+ and thus the relevance/rank condition is not satisfied.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(b) If 
+\begin_inset Formula $Z_{i}=W_{i}$
+\end_inset
+
+ then we know that 
+\begin_inset Formula $Z_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $W_{i}$
+\end_inset
+
+ are perfectly collinear, which means that the rank/relevance condition
+ is not satisfied.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(c) If 
+\begin_inset Formula $W_{i}=1$
+\end_inset
+
+ for all 
+\begin_inset Formula $i$
+\end_inset
+
+ then 
+\begin_inset Formula $W_{i}$
+\end_inset
+
+ ceases to be a random variable and is absorbed into the constant 
+\begin_inset Formula $\beta_{0}.$
+\end_inset
+
+ Thus, 
+\begin_inset Formula $W_{i}$
+\end_inset
+
+ and 1 are perfectly collinear and the rank/relevance condition is not satisfied.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(d) If 
+\begin_inset Formula $Z_{i}=X_{i}$
+\end_inset
+
+ and we know 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+ to be endogenous then we know that 
+\begin_inset Formula $Cov(X_{i},u)\neq0\implies Cov(Z_{i},u)\neq0$
+\end_inset
+
+, which breaks the exogeneity/order condition.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subparagraph*
+3.
+ Consider the regression model: 
+\begin_inset Formula $Y_{i}=\beta_{0}+\beta_{1}X_{i}^{*}+u_{i}$
+\end_inset
+
+ where 
+\begin_inset Formula $X_{i}^{*}$
+\end_inset
+
+ is exogenous (further instructions...)
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(a) 
+\begin_inset Formula $Z_{i}=X_{i}^{*}+v_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $Cov(Z_{i},X_{i})=Cov(X_{i}^{*}+v_{i},X_{i}^{*}+\epsilon_{i})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Because we know that 
+\begin_inset Formula $X_{i}^{*}$
+\end_inset
+
+ is uncorrelated with 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $\epsilon_{i}$
+\end_inset
+
+ this 
+\begin_inset Formula $Cov=Var(X_{i}^{*})$
+\end_inset
+
+, which we know cannot equal 0.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(b) 
+\begin_inset Formula $Z_{i}=X_{i}^{*}+v_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $Cov(Z_{i},u_{i})=Cov(X_{i}^{*}+v_{i},u_{i})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We assume that 
+\begin_inset Formula $X_{i}^{*}$
+\end_inset
+
+ is exogenous and thus cannot be correlated with 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+ and we also assume that the measurement error 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ is uncorrelated with 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Thus 
+\begin_inset Formula $Cov(Z_{i},u_{i})=0.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+(c) The estimator of 
+\begin_inset Formula $\beta_{1}$
+\end_inset
+
+ that I propose is the standard 
+\begin_inset Formula $\hat{\beta^{IV}}$
+\end_inset
+
+estimator which equals 
+\begin_inset Formula $\frac{S_{Z,Y}}{S_{Z,X}}$
+\end_inset
+
+ which 
+\begin_inset Formula $\rightarrow_{p}\frac{Cov(Z,Y)}{Cov(Z,X)}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+If we expand this out:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{Cov(Z,Y)}{Cov(Z,X)}=\frac{Cov(X_{i}^{*}+v_{i},\beta_{0}+\beta_{1}X_{i}^{*}+u_{i})}{Cov(X_{i}^{*}+v_{i},X_{i}^{*}+\epsilon_{i})}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+You get a bunch of terms that cancel out with the exception of:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $=\frac{Cov(X_{i}^{*},\beta_{1}X_{i}^{*})}{Cov(X_{i}^{*},X_{i}^{*})}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $=\beta_{1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Thus the instrumental variables estimator is a consistent estimator of 
+\begin_inset Formula $\beta_{1}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Subparagraph*
+4.
+ In the following question you're going to replicate some results from Card
+ (1995).
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(a) **Sorry Ilari/Laurent.
+ Didn't have enough time to finish this one.
+ 
+\end_layout
+
+\end_body
+\end_document
